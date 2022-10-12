@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="search">Buscar</string>
+    <string name="search_hint">Buscar</string>
+    <string name="name">Nombre</string>
+    <string name="country">Pais</string>
+    <string name="lugar">Lugar</string>
+    <string name="temperatura_actual">Temperatura actual:</string>
+    <string name="fecha">Fecha:</string>
+    <string name="estado">Estado:</string>
+    <string name="temperatura">Temperatura:</string>
+    <string name="pronostico">Pronostico:</string>
+    <string name="ma_ana">Mañana:</string>
+    <string name="pasado_ma_ana">Pasado mañana:</string>
+    <string name="hoy">Hoy:</string>
+</resources>
