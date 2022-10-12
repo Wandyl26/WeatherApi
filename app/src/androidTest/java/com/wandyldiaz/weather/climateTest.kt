@@ -35,7 +35,7 @@ class climateTest {
         keyPressInput("BUCARAMANGA", R.id.search)
         Thread.sleep(10000)
         Espresso.onView(Matchers.allOf(ViewMatchers.withText("Bucaramanga")))
-            .check(ViewAssertions.matches(ViewMatchers.withText("Colombia")))
+            .check(ViewAssertions.matches(ViewMatchers.withText("Bucaramanga")))
     }
 
     @Test
@@ -47,7 +47,7 @@ class climateTest {
         clickInput(R.id.item)
         Thread.sleep(10000)
         Espresso.onView(Matchers.allOf(ViewMatchers.withText("Bucaramanga")))
-            .check(ViewAssertions.matches(ViewMatchers.withText("Colombia")))
+            .check(ViewAssertions.matches(ViewMatchers.withText("Bucaramanga")))
     }
 
     private fun keyPressInput(valueToWrite: String, editText: Int) {
