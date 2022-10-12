@@ -2,6 +2,7 @@ package com.wandyldiaz.weather.model.domain.service
 
 
 import android.util.Log
+import com.wandyldiaz.weather.BuildConfig
 import com.wandyldiaz.weather.model.domain.data.ForeCastResponseData
 import javax.inject.Inject
 import com.wandyldiaz.weather.model.infrastructure.network.NetworkManager
@@ -14,8 +15,8 @@ class ForeCastService @Inject constructor(
     private var networkManager: NetworkManager,
     private var jsonTranslator: JsonTranslator
 ) {
-    private val patch = "v1/forecast.json?key=de5553176da64306b86153651221606&q="
-    private val patchDays = "&days=3"
+    private val patch = BuildConfig.FORECAST_PATH_KAY
+    private val patchDays = BuildConfig.FORECAST_PATH_DAYS
     fun startForeCastService(search: String): ForeCastResponseData {
         return service(search)
     }

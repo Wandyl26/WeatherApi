@@ -15,21 +15,32 @@ android {
         targetSdkVersion 32
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "HOST", "\"https://api.weatherapi.com/\""
+            buildConfigField "String", "SEARCH_PATH", "\"v1/search.json?key=de5553176da64306b86153651221606&q=\""
+            buildConfigField "String", "FORECAST_PATH_KAY", "\"v1/forecast.json?key=de5553176da64306b86153651221606&q=\""
+            buildConfigField "String", "FORECAST_PATH_DAYS", "\"&days=3\""
         }
         debug{
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "HOST", "\"https://api.weatherapi.com/\""
+            buildConfigField "String", "SEARCH_PATH", "\"v1/search.json?key=de5553176da64306b86153651221606&q=\""
+            buildConfigField "String", "FORECAST_PATH_KAY", "\"v1/forecast.json?key=de5553176da64306b86153651221606&q=\""
+            buildConfigField "String", "FORECAST_PATH_DAYS", "\"&days=3\""
         }
         innerTest{
             matchingFallbacks = ['debug']
         }
-
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8

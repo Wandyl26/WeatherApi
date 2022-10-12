@@ -2,6 +2,7 @@ package com.wandyldiaz.weather.model.domain.service
 
 
 import android.util.Log
+import com.wandyldiaz.weather.BuildConfig
 import javax.inject.Inject
 import com.wandyldiaz.weather.model.infrastructure.network.NetworkManager
 import com.wandyldiaz.weather.model.infrastructure.utils.JsonTranslator
@@ -14,7 +15,7 @@ class SearchService @Inject constructor(
     private var networkManager: NetworkManager,
     private var jsonTranslator: JsonTranslator
 ) {
-    private val patch = "v1/search.json?key=de5553176da64306b86153651221606&q="
+    private val patch =  BuildConfig.SEARCH_PATH
     fun startSearchService(search: String): SearchListResponseData {
         return service(search)
     }

@@ -2,8 +2,10 @@ package com.wandyldiaz.weather.model.infrastructure.network
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.os.Build.HOST
 import android.os.NetworkOnMainThreadException
 import android.util.Log
+import com.wandyldiaz.weather.BuildConfig
 import com.wandyldiaz.weather.model.domain.data.ResponseData
 import java.io.*
 import java.net.HttpURLConnection
@@ -16,7 +18,7 @@ import java.net.URL
  * Created by Wandyl Diaz
  */
 class NetworkManager {
-    private val urlApi = "https://api.weatherapi.com/"
+    private val urlApi =  BuildConfig.HOST
     private lateinit var responseData: ResponseData
 
     fun getHTTPData(requestUrl: String?): ResponseData? {
